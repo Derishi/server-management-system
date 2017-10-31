@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-//TODO: Make interns write tests
+//TODO: Make interns write tests :)
 public class ServerServiceTests {
 
 	@Test
