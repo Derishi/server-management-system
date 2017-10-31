@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>serverVO-management-system</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Interview Coding Exercise to create a REST API for managing servers for customers</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

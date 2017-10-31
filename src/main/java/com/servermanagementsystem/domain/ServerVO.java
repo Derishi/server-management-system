@@ -1,4 +1,4 @@
-package com.company.servermanagementsystem.businessobjects;
+package com.servermanagementsystem.domain;
 
 public class ServerVO {
 
@@ -6,8 +6,6 @@ public class ServerVO {
     private String name;
     private String region;
     private String customer;
-
-    private boolean softDelete = false;
 
     public ServerVO(String id, String name, String region, String customer) {
         this.id = id;
@@ -42,13 +40,5 @@ public class ServerVO {
 
     public void setCustomer(String customer) {
         this.customer = customer;
-    }
-
-    public boolean isSoftDelete() {
-        return softDelete;
-    }
-
-    public void setSoftDelete(boolean softDelete) {
-        this.softDelete = softDelete;
     }
 }

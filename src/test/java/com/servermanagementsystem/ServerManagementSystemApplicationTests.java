@@ -1,4 +1,4 @@
-package com.company.servermanagementsystem;
+package com.servermanagementsystem;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

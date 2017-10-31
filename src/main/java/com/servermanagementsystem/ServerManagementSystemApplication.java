@@ -1,4 +1,4 @@
-package com.company.servermanagementsystem;
+package com.servermanagementsystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ServerManagementSystemApplication {
 
 	public static void main(String[] args) {
-		//Create the ServerVO list
 		SpringApplication.run(ServerManagementSystemApplication.class, args);
 	}
 }
