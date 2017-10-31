@@ -15,6 +15,10 @@ public class ServerVOList {
         return instance;
     }
 
+    public static List<ServerVO> retrieveAll() {
+        return serverVOList;
+    }
+
     // Finds ServerVO by Specified ID
     public static ServerVO findServerById(String id) {
         System.out.println(serverVOList);
@@ -59,6 +63,9 @@ public class ServerVOList {
         //Hard Delete First
         ServerVO server = findServerById(id);
         serverVOList.remove(server);
+
+        //Debug
+        System.out.println(serverVOList);
     }
 
     private static List<ServerVO> initializeServerVOList() {
