@@ -17,17 +17,17 @@ public class ServerServiceImpl implements ServerService {
     private static Logger logger = LoggerFactory.getLogger(ServerServiceImpl.class);
 
     //In-Memory List
-    private List<ServerVO> serverVOList = new ArrayList<>();;
+    private List<ServerVO> serverVOList = new ArrayList<>();
 
     public ServerServiceImpl() {
         init();
     }
 
     private void init() {
-        serverVOList.add(new ServerVO("1", "Test ServerVO", "NA", "John Doe"));
+        serverVOList.add(new ServerVO("1", "Test Server", "NA", "John Doe"));
         serverVOList.add(new ServerVO("2", "Device Load Servers", "NA", "Pear Inc."));
-        serverVOList.add(new ServerVO("3", "The Ocho", "NA", "EZPZ"));
-        serverVOList.add(new ServerVO("4", "Eggo Containment Services", "NA", "Jane"));
+        serverVOList.add(new ServerVO("3", "The Ocho", "NA", "ESPN"));
+        serverVOList.add(new ServerVO("4", "Eggo Containment Services", "NA", "Eleven"));
     }
 
     public Collection<ServerVO> retrieveServer(String serverId) {
@@ -61,14 +61,16 @@ public class ServerServiceImpl implements ServerService {
         logger.info("Updating server id: {} with data: {}{}{}", id, name, region, customer);
         ServerVO server = findServerById(id);
 
-        if(!name.trim().isEmpty() && !name.equals("undefined")) {
-            server.setName(name);
-        }
-        if(!region.trim().isEmpty() && !region.equals("undefined")) {
-            server.setRegion(region);
-        }
-        if(!customer.trim().isEmpty() && !customer.equals("undefined")) {
-            server.setCustomer(customer);
+        if (server != null) {
+            if(!name.trim().isEmpty() && !name.equals("undefined")) {
+                server.setName(name);
+            }
+            if(!region.trim().isEmpty() && !region.equals("undefined")) {
+                server.setRegion(region);
+            }
+            if(!customer.trim().isEmpty() && !customer.equals("undefined")) {
+                server.setCustomer(customer);
+            }
         }
     }
 
